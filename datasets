@@ -1,0 +1,20 @@
+Disnayland Revies 
+https://www.kaggle.com/code/ganiesenov/sentiment-analysis-using-nltk-gensim-models/input
+https://eduds.blob.core.windows.net/nlp/DisneylandReviews.csv.zip 
+
+Amazon Mobile Reviews 
+https://www.kaggle.com/datasets/PromptCloudHQ/amazon-reviews-unlocked-mobile-phones?resource=download&select=Amazon_Unlocked_Mobile.csv
+https://eduds.blob.core.windows.net/nlp/Amazon_Unlocked_Mobile.csv.zip
+
+Code: 
+
+from urllib.request import urlretrieve
+import zipfile
+
+url = (    "https://eduds.blob.core.windows.net/nlp/Amazon_Unlocked_Mobile.csv.zip")
+filename = "Amazon_Unlocked_Mobile.csv.zip"
+
+urlretrieve(url, filename)
+
+with zipfile.ZipFile("/content/Amazon_Unlocked_Mobile.csv.zip") as zfile:
+  zfile.extractall()
